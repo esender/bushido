@@ -1,10 +1,10 @@
-# busido
+# Busido
 Very simple and laconic path helper
 
 ## Usage
 
-```
-# paths.js
+```javascript
+// paths.js
 import Busido, { addResource } from 'busido';
 
 let busido = new Busido();
@@ -20,7 +20,7 @@ export default busido.createPaths([
 ])
 ```
 
-```
+```javascript
 import paths from './paths'
 
 paths.pages.path // => '/pages'
@@ -30,3 +30,4 @@ paths.books.pages.paragraphs.path // => '/books/pages/paragraphs'
 paths.books(3).pages(5).paragraphs(7).path // => '/books/3/pages/5/paragraphs/7'
 paths.books(6).pages.paragrahps.path // => '/books/6/pages/paragraphs'
 ```
+
