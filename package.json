@@ -4,7 +4,8 @@
   "description": "",
   "main": "./src/index.js",
   "scripts": {
-    "test": "mocha -w -c --require babel-register ./test/**.js"
+    "test": "mocha -c --require babel-register ./test/**.js",
+    "test_watch": "mocha -w -c --require babel-register ./test/**.js"
   },
   "author": "eSender",
   "license": "ISC",
