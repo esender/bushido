@@ -1,6 +1,6 @@
 function addResource(resourceName, subResources) {
-  function carredResource (parentPath) {
-    let path = parentPath ? `${parentPath}/${resourceName}` : `/${resourceName}`;
+  function carredResource (parentPath = '') {
+    let path = `${parentPath}/${resourceName}`;
 
     function resource(id) {
       let paths = {};
@@ -9,7 +9,7 @@ function addResource(resourceName, subResources) {
 
       if(subResources) {
         subResources.forEach( resource => {
-          paths[resource.resname] = resource(paths.path);
+          paths[resource.resourceName] = resource(paths.path);
         });
       }
 
@@ -20,14 +20,14 @@ function addResource(resourceName, subResources) {
 
     if (subResources) {
       subResources.forEach( subResource => {
-        resource[subResource.resname] = subResource(path);
+        resource[subResource.resourceName] = subResource(path);
       });
     }
 
     return resource;
   }
 
-  carredResource.resname = resourceName;
+  carredResource.resourceName = resourceName;
   return carredResource;
 }
 
@@ -37,7 +37,7 @@ class Bushido {
   createPaths(resources) {
     let paths = {};
     resources.forEach( resource => {
-      paths[resource.resname] = resource();
+      paths[resource.resourceName] = resource();
     });
 
     paths.path = `/`;
