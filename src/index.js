@@ -31,7 +31,7 @@ function addResource(resourceName, subResources) {
   return carredResource;
 }
 
-class NinjaWay {
+class Busido {
   constructor() {}
 
   createPaths(resources) {
@@ -46,4 +46,4 @@ class NinjaWay {
   }
 }
 
-export { NinjaWay as default, addResource };
+export { Busido as default, addResource };
