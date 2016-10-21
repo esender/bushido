@@ -31,7 +31,7 @@ function addResource(resourceName, subResources) {
   return carredResource;
 }
 
-class Busido {
+class Bushido {
   constructor() {}
 
   createPaths(resources) {
@@ -46,4 +46,4 @@ class Busido {
   }
 }
 
-export { Busido as default, addResource };
+export { Bushido as default, addResource };

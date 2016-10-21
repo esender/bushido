@@ -1,15 +1,15 @@
-# Busido
+# Bushido
 Very simple and laconic path helper
 
 ## Usage
 
 ```javascript
 // paths.js
-import Busido, { addResource } from 'busido';
+import Bushido, { addResource } from 'bushido';
 
-let busido = new Busido();
+let bushido = new Bushido();
 
-export default busido.createPaths([
+export default bushido.createPaths([
   addResource('books', [
     addResource('pages', [
       addResource('paragraphs')
