@@ -1,3 +1,9 @@
+[![Code Climate](https://codeclimate.com/github/esender/bushido/badges/gpa.svg)](https://codeclimate.com/github/esender/bushido)
+
+[![Test Coverage](https://codeclimate.com/github/esender/bushido/badges/coverage.svg)](https://codeclimate.com/github/esender/bushido/coverage)
+
+[![Issue Count](https://codeclimate.com/github/esender/bushido/badges/issue_count.svg)](https://codeclimate.com/github/esender/bushido)
+
 # Bushido
 Very simple and laconic path helper
 
