@@ -9,7 +9,7 @@ class Bushido {
       paths[resource.resourceName] = resource();
     });
 
-    paths.path = `/`;
+    paths.path = '/';
 
     return paths;
   }
