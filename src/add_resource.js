@@ -1,34 +1,31 @@
-function addResource(resourceName, subResources) {
-  function carredResource (parentPath = '') {
-    let path = `${parentPath}/${resourceName}`;
+function addResource(resourceName, subResources = []) {
+  function carriedResource(parentPath = '') {
+    const path = `${parentPath}/${resourceName}`;
 
     function resource(id) {
-      let paths = {};
+      const paths = {};
 
       paths.path = `${path}/${id}`;
 
-      if(subResources) {
-        subResources.forEach( resource => {
-          paths[resource.resourceName] = resource(paths.path);
-        });
-      }
+      subResources.forEach((subResource) => {
+        paths[subResource.resourceName] = subResource(paths.path);
+      });
 
       return paths;
     }
 
     resource.path = path;
 
-    if (subResources) {
-      subResources.forEach( subResource => {
-        resource[subResource.resourceName] = subResource(path);
-      });
-    }
+    subResources.forEach((subResource) => {
+      resource[subResource.resourceName] = subResource(path);
+    });
 
     return resource;
   }
 
-  carredResource.resourceName = resourceName;
-  return carredResource;
+  carriedResource.resourceName = resourceName;
+
+  return carriedResource;
 }
 
 export default addResource;
