@@ -1,11 +1,10 @@
 import addResource from './add_resource';
 
 class Bushido {
-  constructor() {}
-
   createPaths(resources) {
-    let paths = {};
-    resources.forEach( resource => {
+    const paths = {};
+
+    resources.forEach((resource) => {
       paths[resource.resourceName] = resource();
     });
 

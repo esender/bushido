@@ -1,7 +1,8 @@
-import addResource from '../src/add_resource';
 import { expect } from 'chai';
+import { beforeEach, describe, it } from 'mocha';
+import addResource from '../src/add_resource';
 
-describe('addResource', function(){
+describe('addResource', () => {
   describe('without subResources', () => {
     let carredResource;
 
@@ -19,7 +20,7 @@ describe('addResource', function(){
 
     describe('set parent resource', () => {
       let resource;
-      
+
       beforeEach(() => {
         resource = carredResource();
       });

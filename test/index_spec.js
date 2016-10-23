@@ -1,11 +1,12 @@
-import Bushido, { addResource } from '../src/index';
 import { expect } from 'chai';
+import { beforeEach, describe, it } from 'mocha';
+import Bushido, { addResource } from '../src/index';
 
-describe('Bushido', function(){
+describe('Bushido', () => {
   let helper;
 
   beforeEach(() => {
-    let bushido = new Bushido();
+    const bushido = new Bushido();
     helper = bushido.createPaths([
       addResource('books', [
         addResource('pages', [
